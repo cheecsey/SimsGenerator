@@ -1,0 +1,42 @@
+﻿@page "/"
+@using Sims4Generator1
+
+<PageTitle>Home</PageTitle>
+<h1 style="font-family: Times New Roman;">Sims 4 Build Generator</h1>
+
+@code {
+    private PromptGenerator generator = new PromptGenerator();
+    private string houseType = "";
+    private string houseColor = "";
+    private string lotSize = "";
+    private string numberOfSims = "";
+
+    protected override void OnInitialized()
+    {
+        generator = new PromptGenerator();
+        Generate();
+    }
+
+    public void Generate()
+    {
+        houseType = generator.TypeOfHouse();
+        houseColor = generator.ColorOfHouse();
+        numberOfSims = generator.NumberOfSims();
+        lotSize = generator.LotSizeOfHouse();
+
+        // if (string.IsNullOrEmpty(lotSize))
+        // {
+        //     lotSize = generator.LotSizeOfHouse();
+        // }
+
+        StateHasChanged();
+    }
+}
+
+<p style="font-family: Times New Roman;"> You should build a: <span style="text-decoration: underline;"> @houseColor </span> <span style="text-decoration: underline;">@houseType</span>.</p>
+<p style="font-family: Times New Roman;"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
+<p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
+
+<button onclick="window.location.reload();" style="font-family: Times New Roman;"> Generate! </button>
+
+
