@@ -11,12 +11,14 @@
     private string lotSize = "";
     private string numberOfSims = "";
 
+    @* when website is opened *@
     protected override void OnInitialized()
     {
         generator = new PromptGenerator();
         Generate();
     }
 
+    @* functionality for the randomizing of the house type, color, num of sims, and lot size *@
     public void Generate()
     {
         houseType = generator.TypeOfHouse();
@@ -32,6 +34,7 @@
 <p style="font-family: Times New Roman;"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
 <p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
 
+@* generate button that refreshes the page *@
 <button onclick="window.location.reload();" style="font-family: Times New Roman;"> Generate! </button>
 
 

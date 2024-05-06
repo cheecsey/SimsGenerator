@@ -2,6 +2,7 @@
 {
     public class PromptGenerator
     {
+        // generates the type of house to be built
         public string TypeOfHouse()
         {
             // different types of houses that can come up into the prompt
@@ -15,7 +16,8 @@
             int index = rand.Next(typeOfHouse.Length);
             return typeOfHouse[index];
         }
-
+        
+        // generates the color of the house
         public string ColorOfHouse()
         {
             // different colors of houses that can come up into the prompt
@@ -30,6 +32,7 @@
             return colorOfHouse[index];
         }
 
+        // generates the size of lot to build the house on
         public string LotSizeOfHouse()
         {
             // different lot sizes you can build on in the sims
@@ -44,6 +47,7 @@
             return lotSize[index];
         }
 
+        // generates the number of sims to be living in the household
         public string NumberOfSims()
         {
             // number of sims to live within the house
