@@ -10,11 +10,11 @@
     private string houseColor = "";
     private string lotSize = "";
     private string numberOfSims = "";
+    private string outdoorFeature = "";
 
     @* when website is opened *@
     protected override void OnInitialized()
     {
-        generator = new PromptGenerator();
         Generate();
     }
 
@@ -25,6 +25,7 @@
         houseColor = generator.ColorOfHouse();
         numberOfSims = generator.NumberOfSims();
         lotSize = generator.LotSizeOfHouse();
+        outdoorFeature = generator.OutdoorFeature();
 
         StateHasChanged();
     }
@@ -33,8 +34,11 @@
 <p style="font-family: Times New Roman;"> You should build a: <span style="text-decoration: underline;"> @houseColor </span> <span style="text-decoration: underline;">@houseType</span>.</p>
 <p style="font-family: Times New Roman;"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
 <p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
+<p style="font-family: Times New Roman;"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p>
 
-@* generate button that refreshes the page *@
+@* generate button *@
+@* <button @onclick="Generate" style="font-family: Times New Roman;">Generate</button> *@
+
 <button onclick="window.location.reload();" style="font-family: Times New Roman;"> Generate! </button>
 
 

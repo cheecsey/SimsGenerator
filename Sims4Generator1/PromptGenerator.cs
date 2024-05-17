@@ -8,7 +8,7 @@
             // different types of houses that can come up into the prompt
             string[] typeOfHouse =
             {
-                "RANCH", "BARN", "MANSION", "COTTAGE", "BUNGALOW", "TREEHOUSE", "TOWNHOUSE", "MOBILE HOME", "BOATHOUSE", "CABIN"
+                "RANCH", "BARN", "MANSION", "COTTAGE", "BUNGALOW", "TREEHOUSE", "TOWNHOUSE", "MOBILE HOME", "BOATHOUSE", "CABIN", "TUDOR", "PENTHOUSE", "LOG CABIN", "APARTMENT BUILDING", "CONDO"
             };
 
             // randomizer
@@ -60,6 +60,21 @@
             Random rand = new();
             int index = rand.Next(numberOfSims.Length);
             return numberOfSims[index];
+        }
+
+        // generates an outdoor feature to add
+        public string OutdoorFeature()
+        {
+            // outdoor feature to add to build
+            string[] outdoorFeature =
+            {
+                "POOL", "BOWLING LANE", "WATERFALL", "MOAT", "GREENHOUSE", "BBQ AREA", "BASKETBALL COURT", "TENNIS COURT", "WATERSLIDE", "GAZEBO"
+            };
+
+            // randomizer
+            Random rand = new();
+            int index = rand.Next(outdoorFeature.Length);
+            return outdoorFeature[index];
         }
     }
 }
