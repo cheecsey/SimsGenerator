@@ -4,6 +4,17 @@
 <PageTitle>Home</PageTitle>
 <h1 style="font-family: Times New Roman;">Sims 4 Build Generator</h1>
 
+<p style="font-family: Times New Roman;"> You should build a: <span style="text-decoration: underline;"> @houseColor </span> <span style="text-decoration: underline;">@houseType</span>.</p>
+<p style="font-family: Times New Roman;"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
+<p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
+<p style="font-family: Times New Roman;"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p>
+
+
+<button onclick="window.location.reload();" style="font-family: Times New Roman;">
+    <img src="SimsPeople.png" alt="Generate" style="width: 32px; height: 32px;" />
+    Generate!
+</button>
+
 @code {
     private PromptGenerator generator = new PromptGenerator();
     private string houseType = "";
@@ -31,14 +42,15 @@
     }
 }
 
+@*
 <p style="font-family: Times New Roman;"> You should build a: <span style="text-decoration: underline;"> @houseColor </span> <span style="text-decoration: underline;">@houseType</span>.</p>
 <p style="font-family: Times New Roman;"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
 <p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
-<p style="font-family: Times New Roman;"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p>
+<p style="font-family: Times New Roman;"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p> *@
 
 @* generate button *@
 @* <button @onclick="Generate" style="font-family: Times New Roman;">Generate</button> *@
 
-<button onclick="window.location.reload();" style="font-family: Times New Roman;"> Generate! </button>
+@*<button onclick="window.location.reload();" style="font-family: Times New Roman;"> Generate! </button>*@
 
 
