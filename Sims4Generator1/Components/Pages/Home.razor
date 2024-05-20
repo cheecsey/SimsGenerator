@@ -9,10 +9,14 @@
 <p style="font-family: Times New Roman;"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
 <p style="font-family: Times New Roman;"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p>
 
-
 <button onclick="window.location.reload();" style="font-family: Times New Roman;">
     <img src="SimsPeople.png" alt="Generate" style="width: 32px; height: 32px;" />
     Generate!
+</button>
+
+<button @onclick="Share" style="font-family: Times New Roman;">
+    <img src="share.png" alt="Share" style="width: 32px; height: 32px;" />
+    Share!
 </button>
 
 @code {
@@ -39,6 +43,11 @@
         outdoorFeature = generator.OutdoorFeature();
 
         StateHasChanged();
+    }
+
+    public void Share()
+    {
+        
     }
 }
 
