@@ -1,6 +1,6 @@
 ﻿namespace Sims4Generator1
 {
-    public class PromptGenerator
+    public class BuildGenerator
     {
         // generates the type of house to be built
         public string TypeOfHouse()

@@ -1,10 +1,46 @@
 ﻿@page "/random-sim"
 
-
-<PageTitle>Random Sim</PageTitle>
+<PageTitle>Random Sims 4 Sim Generator</PageTitle>
 <h1 style="font-family: Times New Roman;">Random Sim Generator</h1>
 
+<p style="font-family: Times New Roman;"> Your sim should be a(n): <span style="text-decoration: underline;"> @ageOfSim </span></p>
+<p style="font-family: Times New Roman;"> With the aesthetic:  <span style="text-decoration: underline;"> @styleOfSim </span></p>
+<p style="font-family: Times New Roman;"> And a hair color of:  <span style="text-decoration: underline;"> @colorOfHair </span></p>
+
+<button onclick="window.location.reload();" style="font-family: Times New Roman;">
+    <img src="SimsPeople.png" alt="Generate" style="width: 32px; height: 32px;" />
+    Generate!
+</button>
+
+<button @onclick="Share" style="font-family: Times New Roman;">
+    <img src="share.png" alt="Share" style="width: 32px; height: 32px;" />
+    Share!
+</button>
 
 @code {
+    private SimGenerator generator = new SimGenerator();
+    private string ageOfSim = "";
+    private string styleOfSim = "";
+    private string colorOfHair = "";
 
+    @* when website is opened *@
+    protected override void OnInitialized()
+    {
+        Generate();
+    }
+
+    @* functionality for the randomizing of the house type, color, num of sims, and lot size *@
+    public void Generate()
+    {
+        ageOfSim = generator.AgeOfSim();
+        styleOfSim = generator.StyleOfSim();
+        colorOfHair = generator.ColorOfHair();
+
+        StateHasChanged();
+    }
+
+    public void Share()
+    {
+
+    }
 }
