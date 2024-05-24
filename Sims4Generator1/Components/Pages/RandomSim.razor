@@ -1,11 +1,14 @@
 ﻿@page "/random-sim"
 
+<style>
+    body { background-image: url('planets.jpg') }
+</style>
 <PageTitle>Random Sims 4 Sim Generator</PageTitle>
-<h1 style="font-family: 'Franklin Gothic Medium';">Random Sim Generator</h1>
+<h1 style="color: cornflowerblue; font-family: 'Franklin Gothic Medium'; font-size: 40px;">Random Sim Generator</h1>
 
-<p style="font-family: 'Franklin Gothic Medium';"> Your sim should be a(n): <span style="text-decoration: underline;"> @ageOfSim </span></p>
-<p style="font-family: 'Franklin Gothic Medium';"> With the aesthetic:  <span style="text-decoration: underline;"> @styleOfSim </span></p>
-<p style="font-family: 'Franklin Gothic Medium';"> And a hair color of:  <span style="text-decoration: underline;"> @colorOfHair </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> Your sim should be a(n): <span style="color: cornflowerblue; text-decoration: underline;"> @ageOfSim </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> With the aesthetic:  <span style="color: cornflowerblue; text-decoration: underline;"> @styleOfSim </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> And a hair color of:  <span style="color: cornflowerblue; text-decoration: underline;"> @colorOfHair </span></p>
 
 <button onclick="window.location.reload();" style="font-family: 'Franklin Gothic Medium';">
     <img src="SimsPeople.png" alt="Generate" style="width: 32px; height: 32px;" />

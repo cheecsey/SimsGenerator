@@ -1,13 +1,16 @@
 ﻿@page "/"
 @using Sims4Generator1
 
+<style> 
+    body { background-image: url('planets.jpg') }
+</style>
 <PageTitle>Random Sims 4 Build Generator</PageTitle>
-<h1 style="font-family: 'Franklin Gothic Medium';">Random Build Generator</h1>
+<h1 style="color: cornflowerblue; font-family: 'Franklin Gothic Medium'; font-size: 40px;">Random Build Generator</h1>
 
-<p style="font-family: 'Franklin Gothic Medium';"> You should build a: <span style="text-decoration: underline;"> @houseColor </span> <span style="text-decoration: underline;">@houseType</span>.</p>
-<p style="font-family: 'Franklin Gothic Medium';"> On a lot sized:  <span style="text-decoration: underline;"> @lotSize </span></p>
-<p style="font-family: 'Franklin Gothic Medium';"> With a family size of:  <span style="text-decoration: underline;"> @numberOfSims </span></p>
-<p style="font-family: 'Franklin Gothic Medium';"> Including a:  <span style="text-decoration: underline;"> @outdoorFeature </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> You should build a: <span style="color: cornflowerblue; text-decoration: underline;"> @houseColor </span> <span style="color: cornflowerblue; text-decoration: underline;">@houseType</span>.</p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> On a lot sized:  <span style="color: cornflowerblue; text-decoration: underline;"> @lotSize </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> With a family size of:  <span style="color: cornflowerblue; text-decoration: underline;"> @numberOfSims </span></p>
+<p style="font-family: 'Franklin Gothic Medium'; font-size: 20px;"> Including a:  <span style="color: cornflowerblue; text-decoration: underline;"> @outdoorFeature </span></p>
 
 <button onclick="window.location.reload();" style="font-family: 'Franklin Gothic Medium';">
     <img src="SimsPeople.png" alt="Generate" style="width: 32px; height: 32px;" />
