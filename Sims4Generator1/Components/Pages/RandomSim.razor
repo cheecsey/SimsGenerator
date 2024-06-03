@@ -1,10 +1,9 @@
 ﻿@page "/random-sim"
 
 <style>
-    body {
-        background-image: url('universe.jpg')
-    }
+    body { background-image: url('simswallpaper.jpg') }
 </style>
+
 <PageTitle>Random Sims 4 Sim Generator</PageTitle>
 <h1 style="color: cornflowerblue; font-family: 'Franklin Gothic Medium'; font-size: 40px;">Random Sim Generator</h1>
 
@@ -17,7 +16,7 @@
     Generate!
 </button>
 
-<button @onclick="Share" style="font-family: 'Franklin Gothic Medium';">
+<button @onclick="CopyToClipboard" style="font-family: 'Franklin Gothic Medium';">
     <img src="share.png" alt="Share" style="width: 32px; height: 32px;" />
     Share!
 </button>
@@ -28,24 +27,23 @@
     private string styleOfSim = "";
     private string colorOfHair = "";
 
-    @* when website is opened *@
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
     protected override void OnInitialized()
     {
         Generate();
     }
 
-    @* functionality for the randomizing of the house type, color, num of sims, and lot size *@
     public void Generate()
     {
         ageOfSim = generator.AgeOfSim();
         styleOfSim = generator.StyleOfSim();
         colorOfHair = generator.ColorOfHair();
-
-        StateHasChanged();
     }
 
-    public void Share()
+    public async void CopyToClipboard()
     {
-
+        
     }
 }
