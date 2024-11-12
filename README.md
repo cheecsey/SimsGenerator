@@ -13,6 +13,12 @@ Let your creativity run wild and breathe new life into your Sims 4 game with thi
 
 ---
 
+## Problem Statement
+
+Many Sims 4 players face "Simmer’s block," where they run out of ideas, lose motivation, or feel uninspired in their gameplay. Without fresh ideas, it can become difficult to create unique Sims, fun backstories, or themed builds, which can make the game feel repetitive over time. My Sims 4 Generator addresses this challenge by providing randomized prompts that encourage creativity and offer new ways to play, keeping the game engaging and fun for both new and longtime players.
+
+---
+
 ## Features
 
 - Generate random prompts for Sims 4 gameplay, including:
